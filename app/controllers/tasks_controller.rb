@@ -22,6 +22,18 @@ class TasksController < ApplicationController
     end
   end
 
+  def edit
+    
+  end
+
+  def update
+    if @task.update(task_params)
+      redirect_to task_path(@task)
+    else
+      render :edit
+    end
+  end
+
   private
 
     def task_params
