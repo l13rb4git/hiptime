@@ -4,6 +4,8 @@ class TasksController < ApplicationController
   def index
     if user_signed_in?
       @tasks = Task.where(:user_id => current_user.id).all.order("created_at DESC")
+
+      redirect_to new_task_path if @tasks.nil?
     end
   end
 
