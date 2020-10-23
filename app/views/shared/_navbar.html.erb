@@ -1,0 +1,15 @@
+<div class="container">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light rounded mt-4">
+    <div class="navbar-header font-weight-bolder">
+      <%= link_to "Hiptime", root_path, class: "navbar-brand" %>
+    </div>
+  
+    <div class="collapse navbar-collapse d-flex" id="navbarsExample09">
+      <%= render "shared/navlinks" %>
+
+      <form class="form-inline my-2 my-md-6 float-right">
+        <input class="form-control" type="text" placeholder="Search Task" aria-label="Search">
+      </form>
+    </div>
+  </nav>
+</div>
